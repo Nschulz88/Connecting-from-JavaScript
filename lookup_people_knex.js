@@ -41,7 +41,9 @@ knex('famous_people').where('first_name', '=', input).asCallback((err, results) 
             console.log(`- ${e.id}: ${e.first_name} ${e.last_name}, born ${getDate(e.birthdate)}`);
         });
     }
+    return knex.destroy();
 });
+
 
 
  
